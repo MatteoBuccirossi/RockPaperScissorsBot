@@ -31,7 +31,6 @@ bot.on('message', (msg)=>{
 
    if(!bot.commands.has(command)){
        console.log('unknown command guv');
-       console.log(bot.commands);
        return;
    }
 
