@@ -6,6 +6,7 @@ const rockPaper = require('./botcommands/rockpaper');
 const random = require('./botcommands/random');
 const help = require('./botcommands/help');
 const kick = require('./botcommands/kick');
+const selfdestruct = require('./botcommands/selfdestruct');
 
 env.config();
 
@@ -16,6 +17,7 @@ bot.commands.set(rockPaper['name'], rockPaper);
 bot.commands.set(random['name'], random);
 bot.commands.set(help['name'], help);
 bot.commands.set(kick['name'], kick);
+bot.commands.set(selfdestruct['name'], selfdestruct);
 
 bot.login(process.env.TOKEN);
 

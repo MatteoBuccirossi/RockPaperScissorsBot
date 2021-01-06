@@ -15,6 +15,8 @@ module.exports={
                   });
             }
         }
+    }else{
+        msg.reply("Puny human, you're not an admin are you?");
     }
   }
 }
