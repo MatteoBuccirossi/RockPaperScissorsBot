@@ -8,7 +8,11 @@ const resultReaction = {
     lost: "It's not possible, I seem to have lost.",
     draw: "Let's play again, shall we?"
 }
-
+const unPCResultReaction = {
+    won: "Suck on my balls",
+    lost: "FUCK, no no please no.",
+    draw: "Let's play again."
+}
 
 //messages middlewares
 function notBot(username, botName){
@@ -63,10 +67,10 @@ module.exports = {
             if(rockPaper(msg.content)){
                 let userPlay = msg.content;
                 let myPlay = rockPaperscis[Math.floor(Math.random()* rockPaperscis.length)];
-                console.log(myPlay);
+               
                 msg.reply(myPlay)
      
-                let result = haveIWon(myPlay, userPlay, resultReaction);
+                let result = haveIWon(myPlay, userPlay, unPCResultReaction);
                 msg.channel.send(result);
             }
         }
