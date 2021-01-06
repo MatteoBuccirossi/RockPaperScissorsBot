@@ -1,10 +1,13 @@
+const discord = require('discord.js');
+
 module.exports={
     name: "!selfdestroy",
     description: "basically a command to kick yourself",
     execute(msg, arg, botName){
-        msg.reply('You will be greatly missed');
+        let attach = new discord.MessageAttachment('../discordbot/assets/adios.png');
+        msg.reply(attach);
         msg.member.kick('Adios').then(()=>{
-            msg.channel.send(`${msg.member.user.username} selfdestructed.`);
+           msg.channel.send(`${msg.member.user.username} selfdestructed.`);
         })
     }
 }

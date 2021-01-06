@@ -61,7 +61,7 @@ function haveIWon(my, his, reaction){
 
 module.exports = {
     name: "!playrps",
-    description: "Plays rock paper scissors",
+    description: "Plays rock paper scissors; ex: '!playrps rock'",
     execute(msg, args, botName){
         if(notBot(msg.author.username, botName)){
             if(rockPaper(msg.content)){
