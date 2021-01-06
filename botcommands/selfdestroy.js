@@ -1,5 +1,5 @@
 module.exports={
-    name: "!selfdestruct",
+    name: "!selfdestroy",
     description: "basically a command to kick yourself",
     execute(msg, arg, botName){
         msg.reply('You will be greatly missed');

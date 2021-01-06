@@ -6,7 +6,7 @@ const rockPaper = require('./botcommands/rockpaper');
 const random = require('./botcommands/random');
 const help = require('./botcommands/help');
 const kick = require('./botcommands/kick');
-const selfdestruct = require('./botcommands/selfdestruct');
+const selfdestruct = require('./botcommands/selfdestroy');
 
 env.config();
 
