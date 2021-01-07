@@ -7,17 +7,21 @@ const random = require('./botcommands/random');
 const help = require('./botcommands/help');
 const kick = require('./botcommands/kick');
 const selfdestruct = require('./botcommands/selfdestroy');
+const ban = require('./botcommands/ban');
 
 env.config();
 
 const bot = new discord.Client();
 bot.commands = new discord.Collection;
 
+
+bot.commands.set(kick['name'], kick);
+bot.commands.set(selfdestruct['name'], selfdestruct);
+bot.commands.set(ban['name'], ban)
 bot.commands.set(rockPaper['name'], rockPaper);
 bot.commands.set(random['name'], random);
 bot.commands.set(help['name'], help);
-bot.commands.set(kick['name'], kick);
-bot.commands.set(selfdestruct['name'], selfdestruct);
+
 
 bot.login(process.env.TOKEN);
 
