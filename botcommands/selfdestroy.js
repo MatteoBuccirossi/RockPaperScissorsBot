@@ -8,6 +8,8 @@ module.exports={
         msg.reply(attach);
         msg.member.kick('Adios').then(()=>{
            msg.channel.send(`${msg.member.user.username} selfdestructed.`);
+        }).catch(e=>{
+            msg.reply('Unable to selfdestroy.')
         })
     }
 }

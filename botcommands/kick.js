@@ -5,6 +5,7 @@ module.exports={
     description: "'!kick [user]' to kick someone",
     execute(msg, arg, botName){
         if(admin(msg)){
+            console.log('aight works')
             let user = msg.mentions.users.first();
 
             if(user){
@@ -12,6 +13,9 @@ module.exports={
               if(member){
                   member.kick('Ya have been kicked, how does that feel?').then(()=>{
                       msg.reply(`Kicked ${user.tag}` );
+                  }).catch(e=>{
+                      console.log(e);
+                      msg.reply('An error occoured, unable to kick.')
                   });
             }
         }
